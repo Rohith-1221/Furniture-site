@@ -14,6 +14,28 @@ var swiper=new Swiper(".slide-content",{
     },
 });
 
+//for login
+function sublogin(){
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+    //reset error messages
+    document.getElementById('usernameError').innerHTML='';
+    document.getElementById('passwordError').innerHTML='';
+    //using regex patterns
+    var usernamePattern=/^[a-zA-Z0-9_@.]{3,}$/;//atleast 3 characters
+    var passwordPattern=/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    //validate username password
+    if(!usernamePattern.test(username)){
+        document.getElementById("usernameError").innerHTML='invalid username';
+        return false;
+    }
+    if(!passwordPattern.test(password)){
+        document.getElementById('passwordError').innerHTML='Invalid password';
+        return false;
+    }
+    return true;
+}
+
 //for liking the gallery
 function rate(){
     document.getElementById('like').style.color='red';

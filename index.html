@@ -27,7 +27,7 @@
                 <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#gallery">Gallery</a>
@@ -45,6 +45,34 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#footer">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#footer" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-circle"></i>Login</a>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Login Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="text-center" onsubmit="return sublogin()">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username"><br>
+                            <span id="usernameError" class="error text-danger"></span> <br>
+                            <br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password"><br>
+                            <span id="passwordError" class="error text-danger"></span> <br>
+                            <br>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <input type="submit" value="submit" class="btn btn-primary">
+                          </form>
+                        </div>
+                        </div>
+                    </div>
+                  </div>
               </li>
             </ul>
           </div>
@@ -90,9 +118,9 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </div>
+  </div><br>
 <!-- about company -->
-<div class="container-fluid">
+<div class="container-fluid" id="about">
     <div class="d-lg-flex d-md-flex align-items-center">
       <div class="col-md-6 col-sm-12 imag">
         <div>
@@ -108,145 +136,113 @@
          we assign the technical and experienced staff.Further till date we ranked at 1st position by providing ontime delivery and good product quality.</h5>
       </div>
     </div>
-  </div>
-
-
-
-
-
-
-
-
-
-<!-- product gallery with text -->
-  <div class="container-fluid electro" id="gallery">
-    <div class="col-md-12 col-sm-12">
-      <h1 class=" text-center text-dark mt-2">GALLERY</h1>
-      <P class="text-dark text-center">Providing the best quality with more attractive.</P>
-    </div>
-  <div class="crow">
-  <div class="swiper">
-    <div class="slide-content">
-      <div class="card-wrapper swiper-wrapper">
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
+  </div><hr>
+<!-- product gallery with text -->  
+  <div class="container-fluid" id="gallery">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-dark">GALLERY</h1>
+            <h3 class="text-dark text-center">Providing the best quality with more attractive.</h3>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card gallery mb-3">
             <div class="card-image">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLzuAWonkATMC3zcB26XBY8rmPKcrRAmq47A&usqp=CAU" alt="" class="card-img">
             </div>
-          </div>
-          <div class="card-content">
-            <h3>DINING TABLES</h3>
-            <p class="text-center">New models and we have different materials.</p>
-            <p><span onclick="rate()" id="like"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+            <div class="card-body text-center ">
+              <p class="card-text">New models and we have different materials.</p>
+              <h3 class="card-text">DINING TABLES</h3>
+              <p><span onclick="rate()" id="like"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+            </div>
           </div>
         </div>
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+          <div class="card gallery mb-3">
             <div class="card-image">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO5cG4F01R5pd0f5xYekPW1jzy-HrbZuOH9A&usqp=CAU" alt="" class="card-img">
             </div>
+            <div class="card-body text-center ">
+              <p class="card-text">Provide the best quaulity and richness by design.</p>
+              <h4 class="card-text">K and Q CHAIRS</h4>
+              <p><span onclick="rate1()" id="like1"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
-          <div class="card-content">
-            <h3>K and Q CHAIRS</h3>
-            <p class="text-center">Provide the best quaulity and richness by design.</p>
-            <p><span onclick="rate1()" id="like1"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
         </div>
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
-            <div class="card-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFhZh-bvUOwnHEGvKHcyBUbeq-OhKL1dYqog&usqp=CAU" alt="" class="card-img">
-            </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <div class="card gallery mb-3">
+          <div class="card-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFhZh-bvUOwnHEGvKHcyBUbeq-OhKL1dYqog&usqp=CAU" alt="" class="card-img">
           </div>
-          <div class="card-content">
-            <h3>SOFA SETS</h3>
-            <p class="text-center">Designing the customer choice is our speciality.</p>
+          <div class="card-body text-center">
+            <p class="card-text">Designing the customer choice is our speciality.</p>
+            <h4 class="card-text">SOFA SETS</h4>
             <p><span onclick="rate2()" id="like2"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
         </div>
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
-            <div class="card-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgM2Gk0F3WgktgLxB0K5tnDNyawd2RLMt3LQ&usqp=CAU" alt="" class="card-img">
-            </div>
-          </div>
-          <div class="card-content">
-            <h3>TV UNITS</h3>
-            <p class="text-center">We design modern way using wood and glass materials.</p>
-            <p><span onclick="rate3()" id="like3"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
-          </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card gallery mb-3">
+        <div class="card-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgM2Gk0F3WgktgLxB0K5tnDNyawd2RLMt3LQ&usqp=CAU" alt="" class="card-img">
         </div>
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
-            <div class="card-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5weHJsi-lq0ui8kypTlikp4tNpqp3_hXeg&usqp=CAU" alt="" class="card-img">
-            </div>
-          </div>
-          <div class="card-content">
-            <h3>READING ROOM</h3>
-            <p class="text-center">Making use of shelfs for storing books and tables.</p>
-            <p><span onclick="rate4()" id="like4"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
-          </div>
+      <div class="card-body text-center ">
+          <p class="card-text">We design with wood and glass materials.</p>
+          <h4 class="card-text">TV UNITS</h4>
+          <p><span onclick="rate3()" id="like3"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+         </div>
+      </div>
+    </div>   
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card gallery mb-3">
+        <div class="card-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs5weHJsi-lq0ui8kypTlikp4tNpqp3_hXeg&usqp=CAU" alt="" class="card-img">
         </div>
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
-            <div class="card-image">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIlNXwXzOTqnUpMHkgJ-hM8_N4zBai8p8FA&usqp=CAU" alt="" class="card-img">
-            </div>
+      <div class="card-body text-center ">
+          <p class="card-text">Making use of shelfs for storing books and tables with lamp facility.</p>
+          <h4 class="card-text">READING ROOM</h4>
+          <p><span onclick="rate4()" id="like4"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
-          <div class="card-content">
-            <h3>BED ROOM</h3>
-            <p class="text-center">Designing King and Queen size beds using quality wood.</p>
-            <p><span onclick="rate5()" id="like5"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
-          </div>
-        </div>
-        <div class="card swiper-slide cardrow">
-          <div class="image-content">
-            <span class="overlay"> </span>
-            <div class="card-image">
-              <img src="https://t3.ftcdn.net/jpg/05/86/91/42/360_F_586914271_ELrwSWlQvkBdTMxxUcsRtzpIBL5DPdsq.jpg" alt="" class="card-img">
-            </div>
-          </div>
-          <div class="card-content">
-            <h3>KITCHEN</h3>
-            <p class="text-center">With customers choice having shelfs,tables and chairs.</p>
-            <p><span onclick="rate6()" id="like6"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
-          </div>
-        </div>
-        <div class="card swiper-slide cardrow">
-            <div class="image-content">
-              <span class="overlay"> </span>
-              <div class="card-image">
-                <img src="https://t4.ftcdn.net/jpg/06/50/56/09/360_F_650560918_SzE4tcb3qRmxV4hC57BBx4delhAMI54k.jpg" alt="" class="card-img">
-              </div>
-            </div>
-            <div class="card-content">
-              <h3>PARTY ROOM</h3>
-              <p class="text-center">Modern way with installing lighting and sound effects</p>
-              <p><span onclick="rate7()" id="like7"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
-            </div>
-          </div>
-       
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card gallery mb-3">
+        <div class="card-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIlNXwXzOTqnUpMHkgJ-hM8_N4zBai8p8FA&usqp=CAU" alt="" class="card-img">
+        </div>
+      <div class="card-body text-center ">
+          <p class="card-text">Designing King and Queen size beds using quality wood.</p>
+          <h4 class="card-text">BED ROOM</h4>
+          <p><span onclick="rate5()" id="like5"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card gallery mb-3">
+        <div class="card-image">
+          <img src="https://t3.ftcdn.net/jpg/05/86/91/42/360_F_586914271_ELrwSWlQvkBdTMxxUcsRtzpIBL5DPdsq.jpg" alt="" class="card-img">
+        </div>
+      <div class="card-body text-center ">
+          <p class="card-text">With customers choice having shelfs,tables and chairs.</p>
+          <h4 class="card-text">KITCHEN</h4>
+          <p><span onclick="rate6()" id="like6"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <div class="card gallery mb-3">
+        <div class="card-image">
+          <img src="https://t4.ftcdn.net/jpg/06/50/56/09/360_F_650560918_SzE4tcb3qRmxV4hC57BBx4delhAMI54k.jpg" alt="" class="card-img">
+        </div>
+      <div class="card-body text-center ">
+          <p class="card-text">Modern way with installing lighting and sound effects.</p>
+          <h4 class="card-text">PARTY ROOM</h4>
+          <p><span onclick="rate7()" id="like7"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+      </div>
+      </div>
+    </div>   
   </div>
-  </div>
-  </div>
-
-
-
-
-
-
+</div>
+  <hr>
     <!-- Footer Section -->
     <div class="container-fluid foot" id="footer">
         <div class="row">
@@ -255,10 +251,10 @@
                   <h3 class="text-center text-warning mb-4">CONNECT WITH US</h3>
                   <form class="text-center" onsubmit="return subForm()">
                     <label>Customer Name:</label>
-                    <input type="text" id='cusname'><br>
+                    <input type="text" id='cusname' placeholder="enter customer name"><br>
                     <span id="cnmError" class="error text-danger"></span><br>
                     <label>E-Mail or Number:</label>
-                    <input type="text" id='emph'><br>
+                    <input type="text" id='emph' placeholder="enter email or number"><br>
                     <span id="epnError" class="error text-danger"></span><br><br>
                     <button class="btn btn-primary" type='submit'>submit</button>
                   </form>
