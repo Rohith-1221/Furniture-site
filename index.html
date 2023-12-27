@@ -33,21 +33,21 @@
                 <a class="nav-link" href="#gallery">Gallery</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#products" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Products
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Living room</a></li>
-                  <li><a class="dropdown-item" href="#">Kitchen</a></li>        
-                  <li><a class="dropdown-item" href="#">Bedroom</a></li>
-                  <li><a class="dropdown-item" href="#">Party room</a></li>
+                  <li><a class="dropdown-item" href="#products">Living room</a></li>
+                  <li><a class="dropdown-item" href="#products">Kitchen</a></li>        
+                  <li><a class="dropdown-item" href="#products">Bedroom</a></li>
+                  <li><a class="dropdown-item" href="#products">Party room</a></li>
                 </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#footer">Contact</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#footer" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-person-circle"></i>Login</a>
+                  <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" id="loginbtn"><i class="bi bi-person-circle"></i>Login</a>
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
@@ -57,17 +57,17 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <form class="text-center" onsubmit="return sublogin()">
-                            <label for="username">Username:</label>
-                            <input type="text" id="username" name="username"><br>
+                          <form class="text-center" onsubmit="return sublogin()" id="formlog">
+                            <label for="username" id="labl">Username:</label>
+                            <input type="text" id="username" name="username" id="inpt" placeholder="Username"><br>
                             <span id="usernameError" class="error text-danger"></span> <br>
                             <br>
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password"><br>
+                            <label for="password" id="labl">Password:</label>
+                            <input type="password" id="password" name="password" id="inpt" placeholder="Password"><br>
                             <span id="passwordError" class="error text-danger"></span> <br>
                             <br>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <input type="submit" value="submit" class="btn btn-primary">
+                            <input type="submit" value="Login" class="btn btn-primary">
                           </form>
                         </div>
                         </div>
@@ -152,7 +152,7 @@
             <div class="card-body text-center ">
               <p class="card-text">New models and we have different materials.</p>
               <h3 class="card-text">DINING TABLES</h3>
-              <p><span onclick="rate()" id="like"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+              <p><span onclick="like()" id="like"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@
             <div class="card-body text-center ">
               <p class="card-text">Provide the best quaulity and richness by design.</p>
               <h4 class="card-text">K and Q CHAIRS</h4>
-              <p><span onclick="rate1()" id="like1"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+              <p><span onclick="like1()" id="like1"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
           </div>
         </div>
@@ -176,7 +176,7 @@
           <div class="card-body text-center">
             <p class="card-text">Designing the customer choice is our speciality.</p>
             <h4 class="card-text">SOFA SETS</h4>
-            <p><span onclick="rate2()" id="like2"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+            <p><span onclick="like2()" id="like2"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
         </div>
     </div>
@@ -188,7 +188,7 @@
       <div class="card-body text-center ">
           <p class="card-text">We design with wood and glass materials.</p>
           <h4 class="card-text">TV UNITS</h4>
-          <p><span onclick="rate3()" id="like3"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          <p><span onclick="like3()" id="like3"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
          </div>
       </div>
     </div>   
@@ -200,7 +200,7 @@
       <div class="card-body text-center ">
           <p class="card-text">Making use of shelfs for storing books and tables with lamp facility.</p>
           <h4 class="card-text">READING ROOM</h4>
-          <p><span onclick="rate4()" id="like4"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          <p><span onclick="like4()" id="like4"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
       </div>
     </div>
@@ -212,7 +212,7 @@
       <div class="card-body text-center ">
           <p class="card-text">Designing King and Queen size beds using quality wood.</p>
           <h4 class="card-text">BED ROOM</h4>
-          <p><span onclick="rate5()" id="like5"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          <p><span onclick="like5()" id="like5"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
       </div>
     </div>
@@ -224,7 +224,7 @@
       <div class="card-body text-center ">
           <p class="card-text">With customers choice having shelfs,tables and chairs.</p>
           <h4 class="card-text">KITCHEN</h4>
-          <p><span onclick="rate6()" id="like6"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          <p><span onclick="like6()" id="like6"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
           </div>
       </div>
     </div>
@@ -236,13 +236,61 @@
       <div class="card-body text-center ">
           <p class="card-text">Modern way with installing lighting and sound effects.</p>
           <h4 class="card-text">PARTY ROOM</h4>
-          <p><span onclick="rate7()" id="like7"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
+          <p><span onclick="like7()" id="like7"><i class="bi bi-heart-fill"></i></span><span onclick="Share()" id="share"><i class="bi bi-share"></i></span></p>
       </div>
       </div>
     </div>   
   </div>
 </div>
   <hr>
+  <!-- products -->
+  <div class="container-fluid products" id="products">
+    <div class="row">
+      <div class="col-md-12">
+          <h1 class="text-center text-dark">PRODUCTS</h1>
+          <h4 class="text-white text-center">Designing various formats and having different materials.Then provide the various products to customers.</h4>
+      </div>
+      <div id="names">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-lroom-tab" data-bs-toggle="pill" data-bs-target="#pills-lroom" type="button" role="tab" aria-controls="pills-lroom" aria-selected="true">LIVING ROOM</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-kitchen-tab" data-bs-toggle="pill" data-bs-target="#pills-kitchen" type="button" role="tab" aria-controls="pills-kitchen" aria-selected="false">KITCHEN</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-broom-tab" data-bs-toggle="pill" data-bs-target="#pills-broom" type="button" role="tab" aria-controls="pills-broom" aria-selected="false">BED ROOM</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-proom-tab" data-bs-toggle="pill" data-bs-target="#pills-proom" type="button" role="tab" aria-controls="pills-proom" aria-selected="false">PARTY ROOM</button>
+        </li>
+      </ul>
+    </div>
+      <div class="tab-content" id="pills-tabContent" id="content">
+        <div class="tab-pane fade show active" id="pills-lroom" role="tabpanel" aria-labelledby="pills-lroom-tab" tabindex="0">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKHINUAlw7rp4I59nvmxMwdmLe_I3jGwjqwQ&usqp=CAU" id="pimage">
+            <p class=" ">Mostly! The living room is often considered the heart of a home, and the furniture you choose for this space plays a crucial role in creating a comfortable and inviting atmosphere..
+              Some common types of living room furniture are Sofa,Chairs,Tv Units,Coffee Tables.</p>
+            <button class="btn btn-success" id="pbtn" onclick="morecontent()">View more</button>
+        </div>
+        <div class="tab-pane fade" id="pills-kitchen" role="tabpanel" aria-labelledby="pills-kitchen-tab" tabindex="0">
+            <img src="https://i.pinimg.com/originals/88/ef/ad/88efaddc73bc7b40b44abf3c2a1b1e70.jpg" id="pimage">
+            <p class=" ">Kitchen furniture plays a crucial role in the functionality and aesthetics of the kitchen, which is often considered the heart of a home.Some common types of kitchen furniture are kitchen cabinets,Dining tables,chairs,kitchen carts.</p>
+            <button class="btn btn-success" id="pbtn" onclick="morecontent1()">View more</button>
+        </div>
+        <div class="tab-pane fade" id="pills-broom" role="tabpanel" aria-labelledby="pills-broom-tab" tabindex="0">
+          <img src="https://img.freepik.com/premium-photo/modern-master-luxury-bedroom-interior-design-pictures-ai-generated-image_848903-1917.jpg" id="pimage">
+          <p class=" ">Bedroom furniture is essential for creating a comfortable and functional space where you can relax and unwind.Some common types of bedroom furniture are Bed frame and matresses,Nightstands,Bedside lamps,Dresser,curtains,lights.</p>
+          <button class="btn btn-success" id="pbtn" onclick="morecontent2()">View more</button>
+        </div>
+        <div class="tab-pane fade" id="pills-proom" role="tabpanel" aria-labelledby="pills-proom-tab" tabindex="0">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-vTF6T4I6ohMTnHkuAq-nN1fu0cVwlgjTZw&usqp=CAU" id="pimage">
+          <p class=" ">Party room furniture is designed to create a lively and entertaining atmosphere for social gatherings. Whether you're hosting a casual get-together, a birthday celebration, or a formal event, the right furniture can enhance the overall experience.Some of the items are Seating arrangements,tables,Dj booth,dance floor.</p>
+          <button class="btn btn-success" id="pbtn" onclick="morecontent3()">View more</button>
+        </div>
+      </div>
+  </div>
+  </div>
     <!-- Footer Section -->
     <div class="container-fluid foot" id="footer">
         <div class="row">

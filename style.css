@@ -32,6 +32,22 @@ body{
 .navlinks li a:hover{
     color:rgb(0, 0, 255);
 }
+#loginbtn{
+    border:1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+}
+#formlog{
+    border:1px solid rgb(0, 0, 0);
+    padding:1rem;
+    background-color: #d072bc;
+}
+#labl{
+    font-size: 1.6rem;
+}
+#inpt{
+    font-size:1.5rem;
+    border:1px solid #000;
+}
 .image{
    height:500px;
    object-fit:cover;
@@ -66,10 +82,37 @@ body{
     position:absolute;
     z-index: 2;
 }
-
-#gallery{
-    background-color: #c45fae;
+.products{
+    padding:1rem;
+    background-color: #e17ccb;
+    border:1px solid #81306f;
 }
+#pills-lroom,#pills-kitchen,#pills-broom,#pills-proom{
+    background-color: #fff;
+    color:#000;
+    padding: 1rem;
+    border-radius:2rem;
+    align-items: center;
+    justify-content: center;
+}
+#pills-lroom-tab,#pills-kitchen-tab,#pills-broom-tab,#pills-proom-tab{    
+    color:#ffffff;
+    padding: 1rem;
+    border-radius:2rem;
+    margin-right: 2rem;
+}
+#pimage{
+    height:15rem;
+    width:20rem;
+    border:1px solid #000000c1;
+    border-radius: 2rem;
+    margin-left: 35rem;
+}
+#pbtn{
+    margin-left: 42rem;
+}
+
+
 .card-image .card-img{
     height: 180px;;
     width:250px;
@@ -88,7 +131,7 @@ body{
     width:20rem;
     height:25rem;
     border-radius: 3rem;
-    background-color: #000;
+    background-color: #000000c1;
     color:white;
     text-align: center;
     align-items: center;
@@ -165,6 +208,12 @@ body{
     .gallery p{
         font-size:1.2rem;
     }
+    #pimage{
+        margin-left:13rem;
+    }
+    #pbtn{
+        margin-left: 20rem;
+    }
 }
 @media (max-width:426px){
     .navlinks li a{
@@ -172,5 +221,11 @@ body{
     }
     .gallery{
         margin-left:2.5rem;
+    }
+    #pimage{
+        margin-left:1rem;
+    }
+    #pbtn{
+        margin-left: 8rem;
     }
 }
