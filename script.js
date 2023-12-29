@@ -82,3 +82,17 @@ function morecontent2(){
 function morecontent3(){
     alert(`For more products suitable for party room visit our site by following. http://anrfurniture.com/partyroom`)
 }
+
+//for form
+function keypress(){
+    document.getElementById('username').style.backgroundColor='blue';
+}
+function keypress1(){
+    document.getElementById('password').style.backgroundColor='blue';
+}
+function keypress2(){
+    document.getElementById('cusname').style.backgroundColor='blue';
+}
+function keypress3(){
+    document.getElementById('emph').style.backgroundColor='blue';
+}

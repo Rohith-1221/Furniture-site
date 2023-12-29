@@ -59,11 +59,11 @@
                         <div class="modal-body">
                           <form class="text-center" onsubmit="return sublogin()" id="formlog">
                             <label for="username" id="labl">Username:</label>
-                            <input type="text" id="username" name="username" id="inpt" placeholder="Username"><br>
+                            <input type="text" id="username" name="username" onkeydown="keypress()" placeholder="Username"><br>
                             <span id="usernameError" class="error text-danger"></span> <br>
                             <br>
                             <label for="password" id="labl">Password:</label>
-                            <input type="password" id="password" name="password" id="inpt" placeholder="Password"><br>
+                            <input type="password" id="password" name="password" onkeydown="keypress1()" placeholder="Password"><br>
                             <span id="passwordError" class="error text-danger"></span> <br>
                             <br>
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
@@ -299,10 +299,10 @@
                   <h3 class="text-center text-warning mb-4">CONNECT WITH US</h3>
                   <form class="text-center" onsubmit="return subForm()">
                     <label>Customer Name:</label>
-                    <input type="text" id='cusname' placeholder="enter customer name"><br>
+                    <input type="text" id='cusname' onkeydown="keypress2()" placeholder="Enter customer name"><br>
                     <span id="cnmError" class="error text-danger"></span><br>
                     <label>E-Mail or Number:</label>
-                    <input type="text" id='emph' placeholder="enter email or number"><br>
+                    <input type="text" id='emph' onkeydown="keypress3()" placeholder="Enter email or number"><br>
                     <span id="epnError" class="error text-danger"></span><br><br>
                     <button class="btn btn-primary" type='submit'>submit</button>
                   </form>
